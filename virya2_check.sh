@@ -1,7 +1,5 @@
 !/bin/bash -l
-$ -N gpu_check
-$ -j y
-$ -l h=virya2
-$ -l h_vmem=20G
-# set environment
+#$ -N gpu_check
+#$ -l h_vmem=5G
+#$ -j y
 nvidia-smi
