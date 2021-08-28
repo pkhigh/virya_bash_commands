@@ -1,6 +1,6 @@
-!/bin/bash -l
+#!/bin/bash -l
 #$ -N gpu_check
-#$ -j y
+#$ -l h_vmem=5G
 #$ -l h=virya
-#$ -l h_vmem=20G
+#$ -j y
 nvidia-smi
