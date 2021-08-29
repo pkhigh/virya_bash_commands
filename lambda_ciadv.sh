@@ -1,8 +1,8 @@
 #!/bin/bash -l
 #$ -N bmvc_afhq_128_lambda_ciadv2
 #$ -j y
-#$ -l h=virya2
-#$ -l g=1
+#$ -l h=virya
+#$ -l 'g=1(7)'
 #$ -l h_vmem=250G
 # set environment
 module load anaconda/3.2019.10/default

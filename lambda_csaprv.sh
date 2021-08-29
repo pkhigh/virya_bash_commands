@@ -1,13 +1,14 @@
 #!/bin/bash -l
 #$ -N bmvc_afhq_128_lambda_csaprv2
 #$ -j y
-#$ -l h=virya2
+#$ -l h=virya
+#$ -l 'g=1(5)'
 #$ -l h_vmem=250G
 # set environment
 module load anaconda/3.2019.10/default
 module load cuda/10.2/default
 source activate stargan-v2
-export CUDA_VISIBLE_DEVICES=4
+export CUDA_VISIBLE_DEVICES=0
 cd paper_work/tini_starganv2/
 
 python main.py --mode distill_train --num_domains 3 --w_hpf 0 --batch_size 8 --num_workers 4 --resume_iter 0  --alpha 128 --efficient 1 \
