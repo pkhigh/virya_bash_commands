@@ -11,6 +11,8 @@ source activate stargan-v2
 export CUDA_VISIBLE_DEVICES=0
 cd paper_work/tini_starganv2/
 
+conda list
+
 python main.py --mode sample --num_domains 2 --w_hpf 1 \
                --resume_iter 100000 \
                --checkpoint_dir expr/checkpoints/celeba_hq \
